@@ -18,7 +18,7 @@ abstract class RenderSettings {
 
   /// A data class for storing render related settings.
   const RenderSettings({
-    this.pixelRatio = 1,
+    this.pixelRatio = 3,
     this.processTimeout = const Duration(minutes: 3),
   });
 
@@ -80,8 +80,8 @@ class MotionSettings extends RenderSettings {
   /// it is important find leveled values and optionally computational scaling
   /// of the output format.
   const MotionSettings({
-    this.simultaneousCaptureHandlers = 10,
-    this.frameRate = 20,
+    this.simultaneousCaptureHandlers = 3, //10
+    this.frameRate = 15, //20
     super.pixelRatio,
     super.processTimeout,
   }) : assert(frameRate < 100, "Frame rate unrealistic high.");
