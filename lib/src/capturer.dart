@@ -284,8 +284,10 @@ class RenderCapturer<K extends RenderFormat> {
         view: flutterView,
         child: RenderPositionedBox(
             alignment: Alignment.center, child: repaintBoundary),
-        configuration: ViewConfiguration(
-          size: logicalSize,
+        configuration:  ViewConfiguration(
+          physicalConstraints:
+              BoxConstraints.tight(logicalSize) * flutterView.devicePixelRatio,
+          logicalConstraints: BoxConstraints.tight(logicalSize),
           devicePixelRatio: session.settings.pixelRatio,
         ),
 
