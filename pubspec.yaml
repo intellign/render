@@ -10,7 +10,7 @@ environment:
 
 dependencies:
   #ffmpeg_kit_flutter_https_gpl: ^5.1.0
-  ffmpeg_kit_flutter: ^6.0.3
+  ffmpeg_kit_flutter_new_https: ^2.6.4
 
   provider: ^6.0.5
   flutter:
